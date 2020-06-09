@@ -1,0 +1,31 @@
+<div class="effectIn">
+    <h1 class="font-titulo center">Home</h1>
+    <div class="row" ng-show="tarefas.length > 0">
+        <div class="input-field col s12">
+            <span class="lnr lnr-magnifier prefix"></span>
+            <input id="search" type="text" ng-model="inputBuscar">
+            <label for="search">Buscar</label>
+        </div>
+    </div>
+
+    <h4 class="font-pd center" ng-show="!tarefas.length > 0">Lista vazia...</h4>
+
+    <ul class="collapsible" ng-show="tarefas.length > 0">
+        <li ng-repeat="array in tarefas | orderBy: 'tarefa' | filter:{ tarefa: inputBuscar}" class="li-list">
+            <div class="collapsible-header"><span class="lnr lnr-chevron-down down"></span>{{ array.tarefa }}</div>
+            <div class="collapsible-body">
+                <p><em><b>Descrição:</b></em> {{ array.descricao }} </p>
+                <p class="font-date"> <em><b>Data para concluir:</b> </em> {{ array.data }} </p>
+                <div style="margin-top: 30px;">
+                    <span class="lnr lnr-pencil icone-edit circle teal p-03 font-1-5 white-text" ng-click="editar(this)"></span>
+                    <span class="lnr lnr-trash icone-del circle red p-03 font-1-5 white-text" ng-click="delete(this)"></span>
+                </div>
+                <p><em>
+                   Modificado: {{ array.dataModificado }}
+                </em></p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<a class="btn-floating btn-large waves-effect waves-light red fixed blue darken-2" href="#!/cadastrar"><span class="lnr lnr-cross"></span></a>

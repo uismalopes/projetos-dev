@@ -1,0 +1,44 @@
+<div class="effectIn">
+<h1 class="font-titulo center">{{ titulo }}</h1>
+<div class="row">
+    <form class="col s12" name="cadastar">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tarefa" 
+          type="text" name="tarefa" 
+          class="validate" autocomplete="off"
+          ng-model="inputTarefa" 
+          minlength="3" required>
+          <label for="tarefa">Tarefa</label>
+          <span ng-show="cadastar.tarefa.$touched && cadastar.tarefa.$invalid">Campo obrigatorio</span>
+        </div>
+        <div class="input-field col s12">
+            <input id="data" 
+            type="tel" name="data" 
+            class="validate" autocomplete="off"
+            ng-model="inputData" 
+            onkeyup="
+              var v = this.value;
+              if (v.match(/^\d{2}$/) !== null) {
+                  this.value = v + '/';
+              } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                  this.value = v + '/';
+              }"
+              maxlength="10"
+            minlength="3" required>
+            <label for="data">Data</label>
+            <span ng-show="cadastar.data.$touched && cadastar.data.$invalid">Campo obrigatorio</span>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="descricao" name="descricao" ng-model="textareaDescricao" class="materialize-textarea validate" minlength="5" required></textarea>
+            <label for="descricao">Descrição</label>
+            <span ng-show="cadastar.descricao.$touched && cadastar.descricao.$invalid">Campo obrigatorio</span>
+          </div>
+        <button class="waves-effect waves-light btn" ng-click="salvar()"
+         ng-disabled="cadastar.$invalid">Salvar</button>
+         <a class="waves-effect waves-light btn red" href="#!/home">cancelar</a>
+      </div>
+    </form>
+  </div>
+
+</div>

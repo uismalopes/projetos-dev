@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Tetris</title>
+ 	<meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Uisma Lopes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+ </head>
+<body>
+
+	<div class="camp_score">
+		<div id="score"></div>
+		<div id="max_ponts" style="margin-bottom: 10px;"></div>
+	</div>	
+  <canvas id="canvas"></canvas>
+  <div class="camp_pause">
+  	<div class="btn">
+    	<div class="pause"><b>||</b></div>
+    	<div class="play"></div>
+  </div>  	
+  </div>
+
+
+<div class="init">
+    <div class="splashScreen">
+          <div class="center">
+            <div class="home">
+                <div class="animation-text">
+                  <span>T</span>
+                  <span>E</span>
+                  <span>T</span>
+                  <span>R</span>
+                  <span>I</span>
+                  <span>S</span>
+                </div>
+                <div class="btns">
+                  <button type="button" class="iniciar-jogo">Jogar</button>
+                  <button type="button" class="dicas-jogos">Como jogar</button>
+                </div>
+            </div>
+            <!--  -->
+              <div class="dicas">
+                <div class="controler-btn">
+                  <div style="display: inline-block;">
+                    <input type="radio" id="desktop" name="check" class="hide" checked />
+                    <label for="desktop">
+                      DESKTOP
+                    </label>
+                  </div>
+                  <div style="display: inline-block;">
+                    <input type="radio" id="mobile" name="check" class="hide" />
+                    <label for="mobile">
+                      MOBILE
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="show" id="desktop-dicas" style="max-width: 360px; margin:0 auto; padding: 20px 0;">
+                    <p style="font-family: 'arial'; font-size: 14px; padding: 0 20px; text-align: left; display: flex; align-items: center;">
+                      <img src="img/setas.png" width="50" style="display: block; margin-bottom: 20px; margin-right: 10px;">
+                      Use as setas para movimentar as peças
+                    </p>
+
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/girar.png" width="50" style="margin-right: 10px;">
+                      Use a tecla R para girar o objeto para a direita
+                    </p>
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/girar_esquerda.png" width="50" style="margin-right: 10px;">
+                      Use a tecla Q para girar o objeto para a esquerda
+                    </p>
+                </div>
+                <div class="hide" id="mobile-dicas" style="max-width: 360px; margin:0 auto; padding: 20px 0;">
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/touch.png" width="40" style="margin-right: 10px;">
+                      Duplo toque para girar o objeto
+                    </p>
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/touch-esquerda.png" width="40" style="margin-right: 10px;">
+                      Slide para esquerda para movimentar
+                    </p>
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/touch-baixo.png" width="40" style="margin-right: 10px;">
+                      Slide para baixo para movimentar
+                    </p>
+                    <p style="font-family: 'arial'; font-size: 14px; display: flex; align-items: center; padding: 0 20px; text-align: left;">
+                      <img src="img/touch-direita.png" width="40" style="margin-right: 10px;">
+                      Slide para direita para movimentar
+                    </p>
+                </div>
+
+                <button class="voltar-home">VOLTAR</button>
+                <button type="button" class="btn-iniciar">JOGAR</button>
+              </div>
+            <!--  -->
+        </div>
+    </div>
+</div>
+
+<div class="txt_pause">PAUSED</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aplicativo Compras</title>
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+	<nav id="menu">
+		<ul>
+			<li><a href="#recebeItem" class="menu_link active">lista</a></li>
+			<li><a href="#concluido" class="menu_link">concluído</a></li>
+		</ul>
+	</nav>
+
+	<div id="bg_fixed">
+		<div class="form fadeIn hide" id="campo_formulario">
+			<h2 class="center">Adiconar item</h2>
+			<form id="form">
+				<input type="text" id="item" placeholder="Item" autocomplete="off" />
+				<input type="number" id="quantidade" placeholder="Quantidade" autocomplete="off">
+				<input type="tel" id="preco" placeholder="Preço: R$ 5,00" autocomplete="off" />
+				<button id="adicionar" class="button_save">Adicionar</button>
+				<button id="cancelar" class="button_cancel">Cancelar</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="box_search">
+		<input type="text" name="search" id="search" placeholder="Buscar" />
+		<ul id="resultado"></ul>
+	</div>
+
+	<div id="concluido"></div>
+
+	<div id="recebeItem"></div>
+	<div id="calculo_total"></div>
+	<div id="dialog"></div>
+	<div id="toast"></div>
+	<div id="btn_for_form">+</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

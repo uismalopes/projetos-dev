@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="GAME,HTML5,CANVAS,JavaScript">
+	<meta name="author" content="Uisma Lopes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style type="text/css">
+		body{padding: 0;margin: 0;overflow: hidden}img{display: none}canvas{display: block;position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0}.sprites_tela{display: block;position: fixed;width: 100%;max-width: 320px;top: 50%;left: 50%;transform: translate(-50%, -50%);text-align: center}#tela_inicial{width: 100%}#play{width: 180px;height: 60px;font-family: impact;font-size: 2em;text-transform: uppercase;color: white;letter-spacing: 1px;text-shadow:2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,0px 2px 0 #000,2px 0px 0 #000,0px -2px 0 #000,-2px 0px 0 #000,2px 2px 5px #000;background-color: #adefb4;border: none;outline: none;transition: all 0.3s;cursor: pointer;margin: 0 auto;display: block;box-shadow: 2px 0 50px 8px #e8ac34}#contagem{display: none;font-size: 8em;text-transform: uppercase;color: white;letter-spacing: 1px;text-shadow:2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,0px 2px 0 #000,2px 0px 0 #000,0px -2px 0 #000,-2px 0px 0 #000,2px 2px 5px #000}#play:hover{letter-spacing: 7px}#pontos{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-family: impact;font-size: 5em;text-transform: uppercase;color: white;letter-spacing: 1px;text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 2px 5px #000;margin: 0;padding: 0}.game_over{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: none}.game_over #img_over{display: block}.game_over span{font-size: 2.2em;text-transform: uppercase;color: white;letter-spacing: 3px;text-shadow:2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,0px 2px 0 #000,2px 0px 0 #000,0px -2px 0 #000,-2px 0px 0 #000,2px 2px 5px #000;box-shadow: inset 0 0 26px #db782c;display: block;background-color: #4d2304;padding: 10px;border-radius: 10px 10px 0 0}.game_over #btn_return{display: block;bottom: 0;position: absolute;left: 50%;transform: translateX(-50%);cursor: pointer}.game_over #ptFinal{position: absolute;left: 50%;transform: translateX(-50%);position: absolute;left: 50%;bottom: 82px;transform: translateX(-50%);font-size: 1.5em;text-transform: uppercase;color: white;font-family: 'Impact';letter-spacing: 1px;text-shadow:2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,0px 2px 0 #000,2px 0px 0 #000,0px -2px 0 #000,-2px 0px 0 #000,2px 2px 5px #000;margin: 0;padding: 0}@media (max-width: 768px){#pontos{top: 0;left: 50%;transform: translateX(-50%)}}.fadeOut{-webkit-animation-name: fadeOut;animation-name: fadeOut;-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both}@-webkit-keyframes fadeOut{0%{opacity: 1}100%{opacity: 0}}@keyframes fadeOut{0%{opacity: 1}100%{opacity: 0}}
+	</style>
+</head>
+<body>
+<canvas id="canvas"><p>TESTE</p></canvas>
+<img src="img/frame-1.png" id="frame-1" />
+<img src="img/frame-2.png" id="frame-2" />
+<img src="img/frame-3.png" id="frame-3" />
+<img src="img/frame-4.png" id="frame-4" />
+<img src="img/bg.png" id="bg" />
+<img src="" id="fg" />
+
+<div class="sprites_tela">
+	<img src="img/bg_inicial.png" id="tela_inicial">
+	<button id="play">Play</button>
+	<p id="contagem"></p>
+</div>
+
+<div class="game_over" id="tela_game_over">
+ <img src="img/game_over.png" id="img_over">
+ <img src="img/btn_return.png" id="btn_return" />
+ <p id="ptFinal"></p>
+</div>
+
+<script src="js/Obstaculos.js"></script>
+<script src="js/Bird.js"></script>
+<script src="js/Environment.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

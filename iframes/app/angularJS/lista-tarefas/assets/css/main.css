@@ -1,0 +1,79 @@
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+}
+body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
+    background: #1976D2;
+}
+
+body::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
+    background: #93f7d3;
+}
+
+.effectIn{
+    animation: effectIn 350ms ease-out;
+}
+
+@keyframes effectIn{
+    0%{ transform: translateY(30%) }
+    100%{ transform: translateY(0) }
+}
+nav .active{
+    background: rgba(0, 0, 0, .5);
+}
+
+.p-03{
+    padding: 0.3em;
+}
+.font-date{
+    font-size: 0.9em;
+}
+
+.fixed{
+    position: fixed;
+    bottom: .5em;
+    right: 1em;
+}
+
+nav .sidenav-trigger{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.down{
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.font-1-5{
+    font-size: 1.5em;
+}
+
+.back{
+    font-size: 1.8em;
+    display: block;
+}
+
+.camp_icon--back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 56px;
+}
+
+.btn-floating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-floating span{
+    font-size: 2em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: block;
+}

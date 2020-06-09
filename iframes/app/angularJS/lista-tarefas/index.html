@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/fonts/icones.css">
+    <link rel="stylesheet" href="assets/fonts/fontes.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body ng-app="myApp">
+    <nav ng-controller="navMenu" class="blue darken-2">
+        <div class="nav-wrapper">
+            <div class="container">
+                <div class="camp_icon--back">
+                    <a class="left back-history" ng-show="!getClass('/home')">
+                        <span class="lnr lnr-arrow-left back"></span>
+                    </a>
+                </div>
+                <span data-target="mobile-demo" class="sidenav-trigger right"><span class="lnr lnr-menu"></span></span>
+                </div>
+            </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+            <li><a href="#!/home">Home</a></li>
+            <li><a href="#!/cadastrar">Cadastrar</a></li>
+      </ul>
+
+    <section ng-view class="container"></section>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-websql.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
